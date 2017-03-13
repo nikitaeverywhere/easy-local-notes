@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-weight: 300;
+    background-color: #eaeaea;
+    padding-bottom: 20px;
+}
+
+@keyframes comeIn {
+    0% { transform: scale(0) }
+    75% { transform: scale(1.03) }
+    100% { transform: scale(1) }
+}
+
+.xmasonry .xblock {
+    animation: comeIn ease 0.5s;
+    animation-iteration-count: 1;
+    transition: all .3s ease;
+}
+
+.note {
+    background-color: yellow;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px;
+    -webkit-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.note:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.delete-note {
+    position: absolute;
+    top:5px;
+    right:5px;
+    display: none;
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.edit-note {
+    position: absolute;
+    top: 7px;
+    right: 23px;
+    display: none;
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-note:hover, .edit-note:hover {
+    color: red;
+}
+
+.note:hover .delete-note, .note:hover .edit-note, .note.touch .delete-note, .note.touch .edit-note {
+    display: block;
+}
+
+.note-editor {
+    display: block;
+    max-width: 600px;
+    padding: 16px;
+    margin: 16px auto;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+    transition: all .3s ease;
+}
+
+.textarea {
+    display: block;
+    width: 100%;
+    resize: none;
+    font-size: 14px;
+    background-color: inherit;
+    border: none;
+    font-weight: 300;
+}
+
+.textarea:focus {
+    outline: 0;
+}
+
+.add-button {
+    float: right;
+    width: 100px;
+    background-color: #44c767;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #2f6627;
+}
+
+.add-button:disabled {
+    background-color: #aaa;
+    border: 1px solid #555;
+}
+
+.add-button:hover:not(:disabled) {
+    cursor: pointer;
+    background-color:#5cbf2a;
+}
+
+.add-button:active {
+    position:relative;
+    top:1px;
+}
+
+.add-button:focus {
+    outline: 0;
+}
+
+.notes-grid {
+    margin: 0 auto;
+}
+
+.app-header {
+    text-align: center;
+    font-weight: 500;
+    color: grey;
+    text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+}
+
+.note-editor-controls {
+    overflow: hidden;
+}
+
+.color-picker {
+    display: inline-block;
+}
+
+.color-picker label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border: 2px solid white;
+    margin: 2px;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 1px 2px gray;
+}
+
+.color-picker input[type=radio] {
+    display: none;
+}
+
+.color-picker input[type=radio]:checked + label {
+    border-color: black;
+}
+
+[contenteditable=true]:empty:before {
+    content: attr(placeholder);
+    color: gray;
+    display: block;
+}
+
+.tag-editor {
+    display: block;
+    background: none;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #ffffff;
+    color: black;
+    margin: 1px 3px;
+    padding: 1px 3px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 12px;
+    box-shadow: 0 1px 4px grey;
+    transition: all .3s ease;
+}
+
+.tag.selectable {
+    cursor: pointer;
+}
+
+.tag.selectable:hover {
+    background-color: blanchedalmond;
+    padding: 1px 6px;
+}
+
+.tag.selected {
+    background-color: sandybrown;
+    box-shadow: 0 1px 4px black;
+}
+
+.note input[type=checkbox], label {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.note label:hover, .note input[type=checkbox]:hover + label {
+    padding-left: 5px;
+    color: midnightblue;
+}
+
+.note input[type=checkbox].checked + label {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.description {
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    font-style: italic;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+    padding: 1px;
+    color: gray;
+}
