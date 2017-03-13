@@ -30,9 +30,6 @@ body {
     -webkit-transition: box-shadow .3s;
     transition: box-shadow .3s;
     white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
     word-wrap: break-word;
 }
 
@@ -42,8 +39,8 @@ body {
 
 .delete-note {
     position: absolute;
-    top:5px;
-    right:5px;
+    top: 5px;
+    right: 5px;
     display: none;
     color: rgba(0,0,0,0.6);
     cursor: pointer;
