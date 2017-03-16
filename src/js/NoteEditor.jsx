@@ -57,7 +57,7 @@ export default class NoteEditor extends React.Component {
             <div className="note-editor" style={{ backgroundColor: this.state.selectedColor }}>
                 <textarea
                     placeholder="Enter your note here. Use &quot;-&quot; or &quot;+&quot; marks to create to-do lists"
-                    rows={(this.state.text.match(/\r?\n/g) || []).length + 2}
+                    rows={(this.state.text.match(/\r?\n/g) || []).length + 4}
                     className="textarea"
                     value={this.state.text}
                     onChange={this.textChanged.bind(this)}

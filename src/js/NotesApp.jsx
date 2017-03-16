@@ -3,6 +3,29 @@ import NoteEditor from "./NoteEditor.jsx";
 import NotesGrid from "./NotesGrid.jsx";
 import TagFilter from "./TagFilter.jsx";
 
+const welcomeNotes = [
+    {
+        color: "#80d8ff",
+        id: 1,
+        tags: ["docs"],
+        text: `Hello!
+
+This is a welcoming note!
+Hover over this note and press on icons to delete or edit it.
+You can set note colors, add some tags to it and filter notes by tags!`
+    },
+    {
+        color: "#ffd180",
+        id: 2,
+        tags: ["docs"],
+        text: `You can create to-do lists, just use "+" or "-" signs at the beginning of the line:
+
++ Visit a gym;
++ Make a party with friends;
+- Conquer the galaxy!`
+    }
+];
+
 export default class NotesApp extends React.Component {
 
     constructor (props) {
@@ -17,6 +40,7 @@ export default class NotesApp extends React.Component {
 
     componentDidMount () {
         let localNotes = JSON.parse(localStorage.getItem(`notes`));
+        if (localNotes === null) localNotes = welcomeNotes;
         if (localNotes) {
             this.setState({
                 notes: localNotes,
