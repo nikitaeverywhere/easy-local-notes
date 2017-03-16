@@ -14,4 +14,4 @@ Preview
 License
 -------
 
-[MIT](LICENSE.md)
+[MIT](LICENSE)
