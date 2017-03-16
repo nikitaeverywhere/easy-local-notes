@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/js/index.jsx",
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "build-dev": "webpack --watch"
   },
   "author": "",
   "license": "MIT",
