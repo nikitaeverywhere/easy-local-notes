@@ -39,7 +39,9 @@ folder will be compile to `docs/index.js` file.
 npm run build # or: npm run build-dev to start development build
 ```
 
-That's it! Now you have the files in `docs` folder which you can serve to open the application in
+That's it! You can receive some warnings on this phase: just ignore them.
+
+Now you have the files in `docs` folder which you can serve to open the application in
 the browser. For example, you can use `serve` package to do so:
 
 ```bash
