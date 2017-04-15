@@ -1,6 +1,6 @@
 {
   "name": "EasyLocalNotes",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "src/js/index.jsx",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "react-radio-group": "^3.0.1",
-    "react-xmasonry": "^1.0.0"
+    "react-xmasonry": "^2.0.0"
   }
 }

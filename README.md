@@ -3,8 +3,8 @@
 A web application for taking notes built with React JS! 
 [See demo here](https://zitros.github.io/easy-local-notes).
 
-Easy Local Notes application demonstrates usage of
-[XMasonry layout](https://zitros.github.io/react-xmasonry).
+Easy Local Notes application demonstrates the usage of
+[React XMasonry layout](https://zitros.github.io/react-xmasonry).
 
 Preview
 -------
