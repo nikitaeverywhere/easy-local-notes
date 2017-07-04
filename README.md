@@ -54,4 +54,4 @@ Then, open the web address printed in the console window.
 License
 -------
 
-[MIT](LICENSE)
+[MIT](LICENSE) © [Nikita Savchenko](https://nikita.tk)
